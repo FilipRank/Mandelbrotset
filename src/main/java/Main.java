@@ -10,6 +10,7 @@ public class Main {
 //        System.out.println(isInMandelbrotSet(c, 80));
 
         //making plot array from -2 to 2
+        final int MAX_ITERATIONS = 800;
         int res = 10000;
         double lowBoundx = -2;
         double lowBoundy = -2;
@@ -21,7 +22,7 @@ public class Main {
         for (int i = 0; i < res; i++) {
             y = lowBoundy;
             for (int j = 0; j < res; j++) {
-                if (isInMandelbrotSet(new ComplexNumber(x, y), 800)) {
+                if (isInMandelbrotSet(new ComplexNumber(x, y), MAX_ITERATIONS)) {
                     trueValuesX.add(x);
                     trueValuesY.add(y);
                 }
